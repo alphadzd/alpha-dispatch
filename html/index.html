@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+    <title>FiveM Dispatch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dispatch-container">
+        <div class="dispatch-header">
+            <div class="header-left">
+                <div class="priority-indicator">
+                    <i class="fas fa-circle"></i>
+                    <span class="priority-text">HIGH</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="call-counter">
+                    <i class="fas fa-phone"></i>
+                    <span id="callCounter">1/10</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="control-btn move-btn" id="moveToggle" title="Move">
+                    <i class="fas fa-arrows-alt"></i>
+                </button>
+                <button class="control-btn close-btn" id="closeDispatch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="dispatch-content">
+            <div class="call-info">
+                <div class="call-header">
+                    <div class="call-code" id="callCode">10-9</div>
+                    <div class="call-time" id="timeAgo">2m ago</div>
+                </div>
+                <div class="call-title" id="callTitle">Store Robbery</div>
+
+                <div class="call-details">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="locationText">Strawberry Ave</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-user"></i>
+                        <span id="suspectInfo">2 suspects</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-car"></i>
+                        <span id="vehicleInfo">Black Sultan</span>
+                    </div>
+                </div>
+            </div>
+<div class="dispatch-actions">
+    <div class="action-buttons">
+        <!-- Add approximately 15% space at the top using <br> -->
+        <br><br><br>
+        
+        <div>
+            <button style="background: rgba(255, 255, 255, 0.05);" class="action-btn prev-btn" id="prevBtn" onclick="previousCall()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <br><br>
+        <div>
+            <button class="action-btn respond-btn" id="respondBtn" onclick="respondToCall()">
+                <i class="fas fa-check"></i>
+                <span>Respond</span>
+            </button>
+        </div>
+        <br><br>
+        <div>
+            <button style="background: rgba(255, 255, 255, 0.05);" class="action-btn next-btn" id="nextBtn" onclick="nextCall()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
